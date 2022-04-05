@@ -1,0 +1,51 @@
+{% extends "layout.html" %} 
+{% block body %}
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card card-body">
+        <form action="/agregar_vehiculo" method="POST">
+          <div>
+            <label> Cliente</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="cliente_id"
+            placeholder="primernombre" class="form-control">
+          </div>
+          <div>
+            <label> Marca </label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="marca" placeholder="marca"
+            class="form-control">
+          </div>
+          <div>
+            <label> Modelo</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="modelo" placeholder="modelo"
+            class="form-control">
+          </div>
+          <div>
+            <label> Placa </label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="placa" placeholder="placa"
+            class="form-control">
+          </div>
+          <div class="form-group">
+            <label> Tipo</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="tipo" placeholder="tipo"
+            class="form-control">
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">
+              Guardar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends "layout.html" %} 
+{% block body %}
+<div class="container">
+<div class="row">
+   <div class="col-sm-10">
+  <h1>Espacios</h1>
+  <br><br><br>
+   
+        <!--<a href="/nuevo_cliente" class="btn btn-success btn-sm">Agregar Cliente</a>-->
+      <a href="/new_espacios" class="btn btn-success btn-sm">Agregar Espacio</a>
+        <br><br>
+    <div class="col-md-5">
+      {% with messages = get_flashed_messages()  %}
+      {% if messages %}
+      {% for message in messages %}
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      {% endfor %}
+      {% endif %}
+      {% endwith %}
+    </div>
+
+<div class="col-xl">
+  <table
+    class="table"
+  >
+    <thead class="thead-light">
+      <tr>
+        <td>Codigo</td>
+        <td>Lote</td>
+        <td>Tipo</td>
+        <td>Disponible</td>
+        <td>Costo</td>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in espacios %}
+      <tr>
+        <td>{{item["espacio_id"]}}</td>
+        <td>{{item["lote_id"]}}</td>
+        <td>{{item["tipo"]}}</td>
+        <td>{{item["disponible"]}}</td>
+        <td>{{item["costo_hora"]}}</td>
+        
+
+        <td>
+          <div class="btn-group" role="group">
+              <a href="/editar_espacio/{{item["espacio_id"]}}"  class="btn btn-warning btn-sm">Editar</a>
+              <a href="/eliminar_espacio/{{item["espacio_id"]}}" class="btn btn-delete btn-danger btn-sm">Eliminar</a>
+          </div>
+            </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+</div>
+</div>
+{% endblock %}

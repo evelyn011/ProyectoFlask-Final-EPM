@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/login_style.css')}}"
+    />
+    <title>Gestión de Parqueo - Acceso</title>
+  </head>
+  <body>
+    <h2 class= "logo" >Gestor de Parqueos EPM</h2>
+    <img class= "mediana" src="static/images/parkingimg.png" />
+     
+    <body>
+      <div class="login-page">
+        <div class="form">
+          <div class="login">
+            <div class="login-header">
+              <img class= "loginImg" src ="static/images/logginimg.png" />
+              <h3>Inicia sesión aquí</h3>
+              <p>Por favor introduce tus credenciales</p>
+            </div>
+          </div>
+          <form class="/" method="POST">
+            <input type="text"  placeholder="Usuario" name="username" />
+            <input type="password" placeholder="Contraseña" name="password" />
+            <button type="submit" value="submit">login</button>
+          </form>
+        </div>
+      </div>
+    </body>
+  </body>
+</html>

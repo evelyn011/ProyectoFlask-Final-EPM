@@ -1,0 +1,58 @@
+{% extends "layout.html" %} 
+{% block body %}
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card card-body">
+        <form action="/agregar_cliente" method="POST">
+          <div>
+            <label> Nombre</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="primer_nombre"
+            placeholder="primernombre" class="form-control">
+          </div>
+          <div>
+            <label> Apellido</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="primer_apellido" placeholder="primerapellido"
+            class="form-control">
+          </div>
+          <div>
+            <label> Tipo</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="tipo_cliente" placeholder="tipocliente"
+            class="form-control">
+          </div>
+          <div>
+            <label> Cedula</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="cedula" placeholder="cedula"
+            class="form-control">
+          </div>
+          <div class="form-group">
+            <label> Telefono</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="telefono" placeholder="telefono"
+            class="form-control">
+          </div>
+          <div class="form-group">
+            <label> Email</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="email" placeholder="email"
+            class="form-control">
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">
+              Guardar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "layout.html" %} 
+{% block body %}
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card card-body">
+        <form action="/agregar_loteparqueos" method="POST">
+          <div>
+            <label> Nombre</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="nombre"
+            placeholder="nombre" class="form-control">
+          </div>
+          <div>
+            <label> Localizacion</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="Localizacion" placeholder="Localizacion"
+            class="form-control">
+          </div>
+          <div>
+            <label>capacidad_total </label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="capacidad_total" placeholder="capacidatotal"
+            class="form-control">
+          </div>
+          
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">
+              Guardar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

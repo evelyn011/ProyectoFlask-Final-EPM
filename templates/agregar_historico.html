@@ -1,0 +1,52 @@
+{% extends "layout.html" %} 
+{% block body %}
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card card-body">
+        <form action="/agregar_historico" method="POST">
+          <div>
+            <label> Fecha Entrada</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="fecha_entrada"
+            placeholder="fechaentrada" class="form-control">
+          </div>
+          <div>
+            <label> Fecha Salida</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="fecha_salida" placeholder="fechasalida"
+            class="form-control">
+          </div>
+          <div>
+            <label> Espacio_id</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="espacio_id" placeholder="espacio_id"
+            class="form-control">
+          </div>
+          <div>
+            <label> Pagado</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="pagado" placeholder="pagado"
+            class="form-control">
+          </div>
+          <div class="form-group">
+            <label> Placa</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="placa" placeholder="placa"
+            class="form-control">
+          </div>
+          
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">
+              Guardar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

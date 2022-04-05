@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2? family= Montserrat:wght@600 & display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Open+Sans & display=swap');
+
+
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  font-family: 'open sans';
+  
+  }
+
+#container{
+  width: 100%;
+}
+
+/*Estilos del header*/
+
+header  {
+  width: 100%;
+  height: 600px;
+  background: #b92b27;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #1565C0, #b92b27); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, hsla(212, 80%, 42%, 0.575), hsla(2, 65%, 44%, 0.61)),url(/static/images/portadaimg.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  
+}
+
+header .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-header h1{
+    font-size: 50px;
+    color:#fff;
+}
+
+.textos-header h2{
+    font-size: 30px;
+    font-weight: 300;
+    color:#fff;
+}
+.wave{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.logo img{
+  width: 150px;
+} 
+
+.logo label {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+  color: #f3a109ce;
+}
+
+/*Estilos del nav*/
+
+.Menu_Container{
+  background: linear-gradient(315deg,#120942,#03756a);
+  width: 100%;
+  height: 70px;
+  padding: 0px 20px;
+}
+
+/*Estilos del menu*/
+  
+
+.Menu{
+  max-width: 1200px;
+  margin: auto;
+  height: 100%;
+  text-decoration: none;
+}
+nav{
+  height: 100%;
+  
+}
+
+nav > ul{
+  height: 100%;
+  display: flex;
+  
+}
+nav  ul li{
+  height: 100%;
+  list-style: none;
+  position: relative;
+  text-decoration: none;
+  
+}
+
+nav > ul > li:first-child > a{
+  background-image: url(/static/images/home.png);
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 20px 40px;
+}
+
+nav > ul > li:first-child:hover > a{
+  background-image: url(/static/images/home.png);
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+nav > ul > li > a{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  padding: 14px;
+  text-transform: uppercase;
+  transition: all 300ms ease;
+  
+}
+nav > ul > li> a:hover{
+  transform: scale(1.1);
+  background-color: #2fb4cc;
+  color:#fff;
+  text-decoration: none;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+
+}
+
+/*Estilos del sub-menu*/
+
+nav ul li ul{
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  position: absolute;
+  top:90px;
+  left: -5px;
+  padding: 14px 0px;
+  visibility: hidden;
+  opacity: 0;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+  z-index: 10;
+  transition: all 300ms ease;
+}
+
+nav ul li:hover ul{
+  visibility: visible;
+  opacity: 1;
+  top: 70px;
+}
+
+nav ul li ul::before{
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid white;
+  position: absolute;
+  top: -12px;
+  left: 20px;
+
+}
+
+nav ul li ul li a{
+  display: block;
+  color: #0099E9;
+  padding: 6px;
+  padding-left: 14px;
+  margin-top: 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: all 300ms ease;
+}
+
+nav ul li ul li a:hover{
+  background: #0074c7;
+  color: #fff;
+  transform: scale(1.1);
+  padding-left: 30px;
+  font-size: 14px;
+  text-decoration: none;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+
+}
+
+/*Estilo del menu para dispositivos moviles*/
+.icon__menu{
+  font-size: 26px;
+  cursor: pointer;
+  width: 26px;
+  height: 100%;
+  display: none;
+  align-items: center;
+
+}
+
+#check__menu{
+  display: none;
+}
+
+#label__check{
+  width: 26px;
+  height: 100%;
+  display: none;
+}
+
+/*Reponsive menu*/
+
+@media (max-width:720px){
+  .logo img{
+    width: 100px;
+  }
+
+  nav > ul{
+    flex-direction: column;
+    background-color: #023877;
+    position: fixed;
+    left: 0;
+    top: 158px;
+    width: 100%;
+    height: 0px;
+    transition: all 300ms ease;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+  }
+  nav > ul > li > a:hover{
+    transform: scale(1);
+  }
+  nav ul li ul{
+    left: 90px;
+  
+  }
+
+  nav > ul > li:hover ul{
+    top: 50px;
+
+  }
+
+  nav > ul > li:first-child a{
+    background-position: 20px;
+  }
+
+  #selected{
+    transform: scale(1);
+  }
+
+  #label__check{
+    display: block;
+  }
+
+  .icon__menu{
+    display: flex;
+  }
+  
+  #check__menu:checked ~ nav > ul{
+    height: 300px;
+    visibility: visible;
+    opacity: 1;
+  }
+  .navbar-brand{
+    display: none;
+  
+
+
+  }
+
+  
+  
+}
+/*Estilo del nombre de la pagina*/
+
+.navbar-brand {
+    font-size: 20px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    color:hsl(249, 86%, 20%);
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    
+  }
+  
+/*Estilos de las tarjetas*/
+.container-card{
+    width: 100%;
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+    
+  }
+.container-card2{
+    width: 100%;
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+    
+  }
+
+.title-cards{
+    width: 100%;
+    max-width: 1080px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    color: #7a7a7a;
+  }
+.card{
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background:#fff;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    transition: all 400ms ease-out;
+    cursor: default;
+  }
+.card:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform: translateY(-3%);
+  }
+.card img{
+    width: 100%;
+    height: 210px;
+  }
+.card .contenido-card{
+    padding: 15px;
+    text-align: center;
+  }
+.card .contenido-card h3{
+    margin-bottom: 15px;
+    color: #7a7a7a;
+  }
+.card .contenido-card p{
+    line-height: 1.8;
+    color: #6a6a6a;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+.card .contenido-card a{
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #2fb4cc;
+    border: 1px solid #2fb4cc;
+    border-radius: 4px;
+    transition: all 400ms ease;
+    margin-bottom: 5px;
+  }
+.card .contenido-card a:hover{
+    background: #2fb4cc;
+    color: #fff;
+  }
+
+/*Reponsive tarjeta*/
+
+@media only screen and (min-width:320px) and (max-width:768px){
+    .container-card{
+      flex-wrap: wrap;
+  }
+    .card{
+      margin: 15px;
+    }
+}
+
+/*Estilos de las tablas*/
+
+h1{
+  text-align: center;
+  color:black;
+  font-family: 'Monserrat';
+  font-size: 50px;
+  position: relative;
+  
+}
+.thead-light{
+  background-color: #1db9b2;
+  color:#fff;
+  font-family: 'Monserrat';
+  font-size: 25px;
+  border: 2px solid #0074c7;
+}
+
+.table td{
+  padding:12px 15px;
+  border:2px solid #0074c7;
+  text-align: center;
+  font-size:15px;
+}
+
+.table th{
+  padding:12px 15px;
+  border:2px solid #0074c7;
+  text-align: center;
+  font-size:15px;
+}
+
+
+.table{
+  width: 100%;
+	border-collapse: collapse;
+	font-family: sans-serif;
+}
+
+.thead-light td{
+  padding:12px 15px;
+  border:2px solid #0074c7;
+  text-align: center;
+  font-size:18px;
+}
+
+tbody tr:nth-child(even){
+	background-color: #f5f5f5;
+}
+

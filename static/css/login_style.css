@@ -1,0 +1,134 @@
+header .header {
+    background-color: #fff;
+    height: 45px;
+  }
+  header a img {
+    width: 134px;
+    margin-top: 4px;
+  }
+  .login-page {
+    width: 360px;
+    padding: 8% 0 0;
+    margin: auto;
+  }
+  .login-page .form .login {
+    margin-top: -31px;
+    margin-bottom: 26px;
+  }
+  .menu-icono img{
+      width: 30px;
+      height: 30px;
+      
+  }
+  .form {
+    position: absolute;
+    top: 180px;
+    left: 870px;
+    z-index: 1;
+    background: #f4f4fa;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    border-radius:20px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(22, 3, 3, 0.712), 0 5px 5px 0 rgba(235, 232, 232, 0.87);
+  }
+  .form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    border-radius:20px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+
+  
+  
+  .form button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background-color: #35a526;
+    background-image: linear-gradient(45deg, #d2e009, #29991a);
+    width: 100%;
+    border-radius:20px;
+    padding: 15px;
+    color: #ffffff;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+  }
+  .form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+
+  }
+  .form .message a {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+    text-decoration: none;
+  }
+  
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 300px;
+    margin: 0 auto;
+    
+  }
+
+  img.mediana {
+    width: 731px;
+    height: 523px;
+    position: relative;
+    top: 200px;
+    left: 100px;
+    
+  }
+
+  img.loginImg {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 18px;
+  }
+
+  
+
+.logo{
+  color: #f3a109ce;
+  font-family:'Times New Roman';
+  font-size: 75px;
+  position: absolute;
+  left: 350px;
+}
+  
+  body {
+    background-color: #FFF;
+    background: linear-gradient(-45deg,#cf0f08,#31035c,#05a670,#2305AB);
+    background-size: 400% 400%;
+    position: relative;
+    animation: change 10s ease-in-out infinite;
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @keyframes change {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+         background-position: 100% 50%;
+    }
+    100%{
+         background-position: 0 50%;
+    }
+     
+  }

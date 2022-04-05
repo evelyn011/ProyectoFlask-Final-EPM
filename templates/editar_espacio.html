@@ -1,0 +1,42 @@
+{% extends "layout.html" %} 
+{% block body %}
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card card-body">
+        <form action="/update_espacio/{{espacio["espacio_id"]}}" method="POST">    
+          <div>
+            <label> Lote</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="lote_id" value="{{espacio["lote_id"]}}" class="form-control">
+          </div>
+          <div>
+            <label> Tipo</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="tipo" value="{{espacio["tipo"]}}"
+            class="form-control">
+          </div>
+          <div>
+            <label> Disponible</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="disponible" value="{{espacio["disponible"]}}" class="form-control">
+          </div>
+          <div>
+            <label> Costo</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="costo_hora" value="{{espacio["costo_hora"]}}"
+            class="form-control">
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">
+              Actualizar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

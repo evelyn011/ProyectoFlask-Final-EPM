@@ -1,0 +1,42 @@
+{% extends "layout.html" %} 
+{% block body %}
+<div class="row">
+  <div class="col-md-4 offset-md-4">
+    <div class="card card-body">
+      <form action="/update_loteparqueo/{{parqueo["lote_id"]}}" method="POST">    
+        <div>
+          <label> Lote</label>
+        </div>
+        <div class="form-group">
+          <input type="text" name="lote_id" value="{{parqueo["lote_id"]}}" class="form-control">
+        </div>
+        <div>
+          <label> Nombre</label>
+        </div>
+        <div class="form-group">
+          <input type="text" name="nombre" value="{{parqueo["nombre"]}}"
+          class="form-control">
+        </div>
+        <div>
+          <label> Localizacion</label>
+        </div>
+        <div class="form-group">
+          <input type="text" name="localizacion" value="{{parqueo["localizacion"]}}" class="form-control">
+        </div>
+        <div>
+          <label> Capacidad</label>
+        </div>
+        <div class="form-group">
+          <input type="text" name="capacidad_total" value="{{parqueo["capacidad_total"]}}"
+          class="form-control">
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary btn-block">
+            Actualizar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

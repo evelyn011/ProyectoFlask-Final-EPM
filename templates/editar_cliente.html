@@ -1,0 +1,58 @@
+{% extends "layout.html" %} 
+{% block body %}
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card card-body">
+        <form action="/update_cliente/{{cliente["cliente_id"]}}" method="POST">
+          <div>
+            <label> Nombre</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="primer_nombre"
+            value="{{cliente["primer_nombre"]}}" class="form-control">
+          </div>
+          <div>
+            <label> Apellido</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="primer_apellido" value="{{cliente["primer_apellido"]}}"
+            class="form-control">
+          </div>
+          <div>
+            <label> Tipo</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="tipo_cliente" value="{{cliente["tipo_cliente"]}}"
+            class="form-control">
+          </div>
+          <div>
+            <label> Cedula</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="cedula" value="{{cliente["cedula"]}}"
+            class="form-control">
+          </div>
+          <div class="form-group">
+            <label> Telefono</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="telefono" value="{{cliente["telefono"]}}"
+            class="form-control">
+          </div>
+          <div class="form-group">
+            <label> Email</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="email" value="{{cliente["email"]}}"
+            class="form-control">
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">
+              Actualizar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
